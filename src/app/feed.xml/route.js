@@ -1,18 +1,21 @@
-import assert from 'assert'
-import * as cheerio from 'cheerio'
-import { Feed } from 'feed'
+import assert from 'assert';
+import * as cheerio from 'cheerio';
+import { Feed } from 'feed';
 
 export async function GET(req) {
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL; // Add this line to get the site URL
 
-  if (!siteUrl) {
-    throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
-  }
+  return new Response('RSS feed generation is disabled.', {
+    status: 200,
+    headers: {
+      'content-type': 'text/plain',
+    },
+  });
 
   let author = {
     name: 'Spencer Sharp',
     email: 'spencer@planetaria.tech',
-  }
+  };
 
   let feed = new Feed({
     title: author.name,
@@ -26,28 +29,28 @@ export async function GET(req) {
     feedLinks: {
       rss2: `${siteUrl}/feed.xml`,
     },
-  })
+  });
 
   let articleIds = require
     .context('../articles', true, /\/page\.mdx$/)
     .keys()
     .filter((key) => key.startsWith('./'))
-    .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''))
+    .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''));
 
   for (let id of articleIds) {
-    let url = String(new URL(`/articles/${id}`, req.url))
-    let html = await (await fetch(url)).text()
-    let $ = cheerio.load(html)
+    let url = String(new URL(`/articles/${id}`, req.url));
+    let html = await (await fetch(url)).text();
+    let $ = cheerio.load(html);
 
-    let publicUrl = `${siteUrl}/articles/${id}`
-    let article = $('article').first()
-    let title = article.find('h1').first().text()
-    let date = article.find('time').first().attr('datetime')
-    let content = article.find('[data-mdx-content]').first().html()
+    let publicUrl = `${siteUrl}/articles/${id}`;
+    let article = $('article').first();
+    let title = article.find('h1').first().text();
+    let date = article.find('time').first().attr('datetime');
+    let content = article.find('[data-mdx-content]').first().html();
 
-    assert(typeof title === 'string')
-    assert(typeof date === 'string')
-    assert(typeof content === 'string')
+    assert(typeof title === 'string');
+    assert(typeof date === 'string');
+    assert(typeof content === 'string');
 
     feed.addItem({
       title,
@@ -57,7 +60,7 @@ export async function GET(req) {
       author: [author],
       contributor: [author],
       date: new Date(date),
-    })
+    });
   }
 
   return new Response(feed.rss2(), {
@@ -66,5 +69,5 @@ export async function GET(req) {
       'content-type': 'application/xml',
       'cache-control': 's-maxage=31556952',
     },
-  })
+  });
 }
