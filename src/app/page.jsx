@@ -7,10 +7,8 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import {
-  GitHubIcon,
+  FacebookIcon,
   InstagramIcon,
-  LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
@@ -86,7 +84,7 @@ function Article({ article }) {
         {formatDate(article.date)}
       </Card.Eyebrow>
       <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
+      {/* <Card.Cta>Read article</Card.Cta> */}
     </Card>
   )
 }
@@ -116,28 +114,51 @@ export default async function Home() {
             own terms.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink href="#" aria-label="Follow on X" icon={XIcon} />
+            {/* <SocialLink href="#" aria-label="Follow on X" icon={XIcon} /> */}
             <SocialLink
-              href="#"
+              href="https://www.instagram.com/lmsphotos/"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="#"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
+              href="https://www.facebook.com/lmsphotos/"
+              aria-label="Follow on Facebook"
+              icon={FacebookIcon}
             />
-            <SocialLink
+            {/* <SocialLink
               href="#"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
-            />
+            /> */}
           </div>
         </div>
       </Container>
       <Container className="mt-9">
         <Featured />
       </Container>
+      <Container>
+        <p className="mt-4 text-zinc-400">
+          影片說明：Title: The Non-Existing Railroad Sceneries Is it landscape
+          or figures paintings on the train? Or the non-existing figures
+          paintings on the train. Sartre once said: “Nausea is one necessary
+          feeling for a being exisiting in this world.” Due to the politics,
+          Taiwanese cannot go to Tibet alone but with tour groups arranged by
+          agencies. I accidentally went with friend’s group few years ago and
+          took the train on Qinghai-Tibet Railway. This was a journey in China,
+          a journey on railroads hurried and unprepared with nausea. I love
+          Mount Kailash, the Tibetan spiritual mountain and would love to pay a
+          visit. But I eventually didn’t make it this time. But these three days
+          on the train to Lhasa made me excited and anxious. In this air
+          conditioned space, my body was against air pressure and made me
+          vomited/nauseated. My expectation and excitement have been totally
+          ruined. The physical and mental discomforts made the sceneries outside
+          the window like Chinese paintings. These politically influenced
+          sceneries are so tranquil that it almost feels never existed before.
+          Maybe one being’s consciousness can be free and unrestrained, but this
+          loathing flesh has to be unwillingly connected with the world and be
+          prisoned from the outside. It’s the railroad sceneries about politics.
+        </p>
+        </Container>
       {/* <Photos /> */}
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
@@ -152,7 +173,7 @@ export default async function Home() {
           </div>
         </div>
       </Container>
-      <Container className="mt-24 md:mt-28">
+      <Container>
         <Masonry />
       </Container>
     </>
