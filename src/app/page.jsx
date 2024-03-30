@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import clsx from 'clsx'
@@ -6,10 +6,7 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
-import {
-  FacebookIcon,
-  InstagramIcon,
-} from '@/components/SocialIcons'
+import { FacebookIcon, InstagramIcon } from '@/components/SocialIcons'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import Featured from '@/components/Featured'
@@ -137,28 +134,47 @@ export default async function Home() {
         <Featured />
       </Container>
       <Container>
-        <p className="mt-4 text-zinc-400">
-          影片說明：Title: The Non-Existing Railroad Sceneries Is it landscape
-          or figures paintings on the train? Or the non-existing figures
-          paintings on the train. Sartre once said: “Nausea is one necessary
-          feeling for a being exisiting in this world.” Due to the politics,
-          Taiwanese cannot go to Tibet alone but with tour groups arranged by
-          agencies. I accidentally went with friend’s group few years ago and
-          took the train on Qinghai-Tibet Railway. This was a journey in China,
-          a journey on railroads hurried and unprepared with nausea. I love
-          Mount Kailash, the Tibetan spiritual mountain and would love to pay a
-          visit. But I eventually didn’t make it this time. But these three days
-          on the train to Lhasa made me excited and anxious. In this air
-          conditioned space, my body was against air pressure and made me
+        <h2 class="text-2xl sm:text-xl mt-4 font-bold text-zinc-100">影片說明：</h2>
+        <p class="mt-4 text-zinc-400">
+          Title: The Non-Existing Railroad Sceneries
+        </p>
+        <p class="mt-4 text-zinc-400">
+          Is it landscape or figures paintings on the train? Or the non-existing
+          figures paintings on the train.
+        </p>
+        <p class="mt-4 text-zinc-400">
+          Sartre once said: “Nausea is one necessary feeling for a being
+          existing in this world.”
+        </p>
+        <p class="mt-4 text-zinc-400">
+          Due to the politics, Taiwanese cannot go to Tibet alone but with tour
+          groups arranged by agencies. I accidentally went with friend’s group
+          few years ago and took the train on Qinghai-Tibet Railway.
+        </p>
+        <p class="mt-4 text-zinc-400">
+          This was a journey in China, a journey on railroads hurried and
+          unprepared with nausea.
+        </p>
+        <p class="mt-4 text-zinc-400">
+          I love Mount Kailash, the Tibetan spiritual mountain and would love to
+          pay a visit. But I eventually didn’t make it this time. But these
+          three days on the train to Lhasa made me excited and anxious. In this
+          air conditioned space, my body was against air pressure and made me
           vomited/nauseated. My expectation and excitement have been totally
           ruined. The physical and mental discomforts made the sceneries outside
           the window like Chinese paintings. These politically influenced
           sceneries are so tranquil that it almost feels never existed before.
+        </p>
+        <p class="mt-4 text-zinc-400">
           Maybe one being’s consciousness can be free and unrestrained, but this
           loathing flesh has to be unwillingly connected with the world and be
-          prisoned from the outside. It’s the railroad sceneries about politics.
+          prisoned from the outside.
         </p>
-        </Container>
+        <p class="mt-4 text-zinc-400">
+          It’s the railroad sceneries about politics.
+        </p>
+        <div class="mt-16 border-t-2 border-zinc-600"></div>
+      </Container>
       {/* <Photos /> */}
       <Container className="mt-4 md:mt-8">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
