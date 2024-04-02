@@ -7,7 +7,7 @@ import { FacebookIcon, InstagramIcon } from '@/components/SocialIcons'
 import Featured from '@/components/Featured'
 import Masonry from '@/components/Masonry'
 import { Timeline } from '@/components/Timeline'
-import avatarImage from '@/images/avatar.jpg'
+import avatarImage from '@/images/avatar.webp'
 
 function SocialLink({ icon: Icon, ...props }) {
   return (
