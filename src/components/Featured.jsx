@@ -5,7 +5,7 @@ const Featured = () => {
   return (
     <div className="mt-16 grid gap-4 md:mt-20">
       <div>
-        <video className="rounded-lg" controls autoPlay muted poster="https://res.cloudinary.com/dxt5dbdan/image/upload/v1712047955/Header/VS--YouTube--0_01_1_sfvfmk.webp">
+        <video className="rounded-lg" controls autoPlay muted playsInline poster="https://res.cloudinary.com/dxt5dbdan/image/upload/v1712047955/Header/VS--YouTube--0_01_1_sfvfmk.webp">
           <source
             src="https://res.cloudinary.com/dxt5dbdan/video/upload/v1712042431/Header/Mountain_Lin_Train_wvhr3b.mp4"
             type="video/mp4"
