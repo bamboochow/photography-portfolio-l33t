@@ -32,7 +32,7 @@ export default function Home() {
             Lin Meng Shan AKA Mountain 林盟山
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            林盟山1966生於台北，1991開始參與攝影工作，1994年起擔任多家雜誌社攝影編輯，目前為自由工作者，作品橫跨平面媒體、影像媒體、唱片封片與電影劇照等領域，2010-2015
+            林盟山1966年生於台北，1991年開始參與攝影工作，1994年起擔任多家雜誌社攝影編輯，目前為自由工作者，作品橫跨平面媒體、影像媒體、唱片封片與電影劇照等領域，2010年-2015年
             金馬國際影展官方肖像攝影師。
           </p>
           <div className="mt-6 flex gap-6">
