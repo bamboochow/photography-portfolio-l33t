@@ -11,6 +11,7 @@ import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 import Featured from '@/components/Featured'
 import Masonry from '@/components/Masonry'
+import { Timeline } from '@/components/Timeline'
 
 function MailIcon(props) {
   return (
@@ -102,13 +103,19 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Software designer, founder, and amateur astronaut.
+            Lin Meng Shan AKA Mountain 林盟山
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            Freelance Photographer
+          </p>
+          <p className="mt-0 text-base text-zinc-600 dark:text-zinc-400">
+            Taipei, Taiwan
+          </p>
+          <p className="mt-0 text-base text-zinc-600 dark:text-zinc-400">
+            +886 932254397
+          </p>
+          <p className="mt-0 text-base text-zinc-600 dark:text-zinc-400">
+            mountainl@gmail.com
           </p>
           <div className="mt-6 flex gap-6">
             {/* <SocialLink href="#" aria-label="Follow on X" icon={XIcon} /> */}
@@ -134,7 +141,9 @@ export default async function Home() {
         <Featured />
       </Container>
       <Container>
-        <h2 class="text-2xl sm:text-xl mt-4 font-bold text-zinc-100">影片說明：</h2>
+        <h2 class="mt-4 text-2xl font-bold text-zinc-100 sm:text-xl">
+          影片說明：
+        </h2>
         <p class="mt-4 text-zinc-400">
           Title: The Non-Existing Railroad Sceneries
         </p>
@@ -173,21 +182,13 @@ export default async function Home() {
         <p class="mt-4 text-zinc-400">
           It’s the railroad sceneries about politics.
         </p>
-        <div class="mt-16 border-t-2 border-zinc-600"></div>
+        {/* <div class="mt-16 border-t-2 border-zinc-600"></div> */}
       </Container>
       {/* <Photos /> */}
       <Container className="mt-4 md:mt-8">
-        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-16">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
-          </div>
-          <div className="space-y-10 lg:pl-16 xl:pl-24">
-            {/* <Newsletter /> */}
-            {/* <Resume /> */}
-          </div>
-        </div>
+        {/* <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2"> */}
+          <Timeline />
+        {/* </div> */}
       </Container>
       <Container className="mt-4 md:mt-8">
         <Masonry />

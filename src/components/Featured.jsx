@@ -7,7 +7,7 @@ const Featured = () => {
       <div>
         <video className="rounded-lg" controls autoPlay muted>
           <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+            src="https://res.cloudinary.com/dxt5dbdan/video/upload/v1712042431/Mountain_Lin_Train_wvhr3b.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag.
