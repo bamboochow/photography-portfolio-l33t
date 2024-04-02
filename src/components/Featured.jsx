@@ -13,6 +13,7 @@ const Featured = () => {
           Your browser does not support the video tag.
         </video>
       </div>
+
     </div>
   )
 }

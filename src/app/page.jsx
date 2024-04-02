@@ -54,27 +54,27 @@ export default function Home() {
         <Featured />
       </Container>
       <Container>
-        <h2 class="mt-4 text-2xl font-bold text-zinc-100 sm:text-xl">
+        <h2 className="mt-4 text-2xl font-bold text-zinc-100 sm:text-xl">
           The Non-Existing Railroad Sceneries:
         </h2>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           Is it landscape or figures paintings on the train? Or the non-existing
           figures paintings on the train.
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           Sartre once said: “Nausea is one necessary feeling for a being
           existing in this world.”
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           Due to the politics, Taiwanese cannot go to Tibet alone but with tour
           groups arranged by agencies. I accidentally went with friend’s group
           few years ago and took the train on Qinghai-Tibet Railway.
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           This was a journey in China, a journey on railroads hurried and
           unprepared with nausea.
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           I love Mount Kailash, the Tibetan spiritual mountain and would love to
           pay a visit. But I eventually didn’t make it this time. But these
           three days on the train to Lhasa made me excited and anxious. In this
@@ -84,15 +84,15 @@ export default function Home() {
           the window like Chinese paintings. These politically influenced
           sceneries are so tranquil that it almost feels never existed before.
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           Maybe one being’s consciousness can be free and unrestrained, but this
           loathing flesh has to be unwillingly connected with the world and be
           prisoned from the outside.
         </p>
-        <p class="mt-4 text-zinc-400">
+        <p className="mt-4 text-zinc-400">
           It’s the railroad sceneries about politics.
         </p>
-        <div class="mt-16 border-t-2 border-zinc-600"></div>
+        <div className="mt-16 border-t-2 border-zinc-600"></div>
       </Container>
       {/* <Photos /> */}
       <Container className="mt-4 md:mt-8">
