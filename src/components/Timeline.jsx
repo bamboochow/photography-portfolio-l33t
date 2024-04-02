@@ -4,9 +4,9 @@ export function Timeline() {
   return (
     <>
       <div>
-        <h3 className="text-base font-semibold leading-7 text-zinc-900 dark:text-zinc-100">
+        <h2 class="mt-4 text-2xl font-bold text-zinc-100 sm:text-xl">
           Timeline
-        </h3>
+        </h2>
         <p className="mt-1 max-w-2xl text-sm leading-6 text-zinc-700 dark:text-zinc-400">
           Lorem Ibsum
         </p>
