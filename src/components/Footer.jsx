@@ -38,7 +38,7 @@ export function Footer() {
                   priority
                 />
                 <p className="text-sm leading-6 text-gray-300">
-                Lin Meng Shan AKA Mountain 林盟山
+                  Lin Meng Shan AKA Mountain 林盟山
                 </p>
                 <div className="flex space-x-6">
                   <SocialLink
@@ -75,7 +75,7 @@ export function Footer() {
                       </li>
                     </ul>
                   </div>
-                  <div>
+                  {/* <div>
                     <h2 className="text-sm font-semibold leading-6 text-white">
                       Navigation
                     </h2>
@@ -87,7 +87,7 @@ export function Footer() {
                         <NavLink href="/timeline">Timeline</NavLink>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -101,5 +101,5 @@ export function Footer() {
         </div>
       </ContainerOuter>
     </footer>
-  )
+  );
 }

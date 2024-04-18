@@ -13,7 +13,7 @@ function NavItem({ href, children }) {
         className={clsx(
           'relative block px-3 py-2 transition',
           isActive
-            ? 'text-gray-500 dark:text-gray-400'
+            ? 'text-white dark:text-white font-bold'
             : 'hover:text-gray-500 dark:hover:text-gray-400',
         )}
       >
@@ -28,7 +28,7 @@ function NavItem({ href, children }) {
 
 function Navigation() {
   return (
-    <nav className="rounded-full bg-white/90 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
+    <nav className="rounded-full bg-white/10 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10">
       <ul className="flex space-x-4 px-3 text-sm font-medium text-zinc-800 dark:text-zinc-200">
         <NavItem href="/">Home</NavItem>
         <NavItem href="/timeline">Timeline</NavItem>
