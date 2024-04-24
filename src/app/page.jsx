@@ -1,11 +1,35 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from '@/components/Container';
 import Featured from '@/components/Featured';
 import Masonry from '@/components/Masonry';
 
 export default function Home() {
   const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    // Function to load Google Analytics
+    const loadGA = () => {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-D5ZE77LN6W');
+    };
+
+    // Create a script element to include Google Analytics
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-D5ZE77LN6W';
+    document.body.appendChild(script);
+
+    // Execute the Google Analytics setup function after the script loads
+    script.onload = loadGA;
+
+    return () => {
+      // Cleanup the script from the body to avoid duplicated script tags
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const toggleDescription = () => {
     setIsExpanded(!isExpanded);
